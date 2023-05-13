@@ -18,7 +18,7 @@ def generate_smallvariants(resource):
         wallpaper_small_path = wallpapers_path + wallpaper_small
 
         # Save the wallpaper with 1/5 size to wallpaper_small_path
-        with Image.open(wallpapers_path + wallpaper) as img:
+        with Image.open(wallpapers_path + wallpaper).convert('RGB') as img:
             small_width = img.width / 5
             small_height = img.height / 5
 
